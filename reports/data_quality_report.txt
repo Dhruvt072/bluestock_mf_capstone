@@ -1,0 +1,17 @@
+Data Quality Summary
+
+1. Successfully loaded all 10 datasets.
+
+2. Missing values checked.
+  
+3. Duplicate rows checked.
+  
+4. AMFI Validation:
+   - Total codes checked.
+   - Missing codes.
+
+5. API data successfully fetched.
+
+
+Conclusion:
+Data ingestion completed successfully.

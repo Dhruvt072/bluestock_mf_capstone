@@ -1,0 +1,142 @@
+DAY 1 DATA INGESTION REPORT
+
+Project: Mutual Fund Analytics Platform
+Intern: Utsav Ratadiya
+Date: 22 June 2026
+
+====================================================
+DATASET LOADING SUMMARY
+=======================
+
+Successfully loaded and inspected all 10 datasets using Pandas.
+
+Total Datasets Loaded: 10
+
+Dataset Overview:
+
+1. 01_fund_master.csv
+
+   * Rows: 40
+   * Columns: 15
+   * Missing Values: 0
+   * Duplicate Rows: 0
+
+2. 02_nav_history.csv
+
+   * Rows: 46,000
+   * Columns: 3
+   * Missing Values: 0
+   * Duplicate Rows: 0
+
+3. 03_aum_by_fund_house.csv
+
+   * Rows: 90
+   * Columns: 5
+   * Missing Values: 0
+   * Duplicate Rows: 0
+
+4. 04_monthly_sip_inflows.csv
+
+   * Rows: 48
+   * Columns: 6
+   * Missing Values: 12 (yoy_growth_pct)
+   * Duplicate Rows: 0
+
+5. 05_category_inflows.csv
+
+   * Rows: 144
+   * Columns: 3
+   * Missing Values: 0
+   * Duplicate Rows: 0
+
+6. 06_industry_folio_count.csv
+
+   * Rows: 21
+   * Columns: 6
+   * Missing Values: 0
+   * Duplicate Rows: 0
+
+7. 07_scheme_performance.csv
+
+   * Rows: 40
+   * Columns: 19
+   * Missing Values: 0
+   * Duplicate Rows: 0
+
+8. 08_investor_transactions.csv
+
+   * Rows: 32,778
+   * Columns: 13
+   * Missing Values: 0
+   * Duplicate Rows: 0
+
+9. 09_portfolio_holdings.csv
+
+   * Rows: 322
+   * Columns: 8
+   * Missing Values: 0
+   * Duplicate Rows: 0
+
+10. 10_benchmark_indices.csv
+
+    * Rows: 8,050
+    * Columns: 3
+    * Missing Values: 0
+    * Duplicate Rows: 0
+
+====================================================
+KEY OBSERVATIONS
+================
+
+1. All datasets were loaded successfully without errors.
+
+2. No duplicate records were found in any dataset.
+
+3. No missing values were found except in
+   monthly_sip_inflows.csv.
+
+4. Column yoy_growth_pct contains 12 missing values.
+   This is expected because Year-over-Year growth
+   cannot be calculated for the initial months where
+   prior-year comparison data is unavailable.
+
+5. Date-related columns are currently stored as
+   string/object data types and will require
+   conversion to datetime format during data
+   cleaning (Day 2).
+
+6. AMFI codes are consistently present across
+   major datasets and appear suitable for joining
+   datasets in later stages.
+
+7. NAV history dataset is the largest dataset
+   containing 46,000 records and will be the
+   primary source for return and risk analysis.
+
+8. Investor transactions dataset contains
+   32,778 transaction records and will be used
+   for demographic and behavioral analysis.
+
+====================================================
+DATA QUALITY STATUS
+===================
+
+Data Completeness: Good
+Data Consistency: Good
+Duplicate Records: None
+Critical Issues Found: None
+
+Overall Assessment:
+The datasets are clean, structured, and suitable
+for further processing, validation, and analysis.
+
+Status:
+Day 1 Data Ingestion Completed Successfully.
+
+
+Additional Note:
+
+The missing values in yoy_growth_pct are considered
+business-logic null values rather than data quality
+issues because Year-over-Year growth requires data
+from the previous year for comparison.
